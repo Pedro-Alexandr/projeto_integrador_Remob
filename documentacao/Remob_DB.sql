@@ -7,7 +7,7 @@ CREATE TABLE Passageiro
  telefone INT,  
  email VARCHAR(100),  
  senha VARCHAR(30),  
- sexo VARCHAR(1) 
+ genero VARCHAR(10) 
 ); 
 
 CREATE TABLE Motorista 
@@ -22,7 +22,7 @@ CREATE TABLE Motorista
  nome VARCHAR(100),  
  senha VARCHAR(30),  
  telefone INT,  
- sexo VARCHAR(1),  
+ genero VARCHAR(10),  
  idade DATE
 ); 
 
