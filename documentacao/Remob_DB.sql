@@ -15,8 +15,8 @@ CREATE TABLE Motorista
  CNH INT,  
  RG INT,  
  ID INT PRIMARY KEY AUTO_INCREMENT,  
- idVeiculo INT,  
- idViagem INT,  
+ ID_Veiculo INT,  
+ ID_Viagem INT,  
  CPF VARCHAR(20),  
  email VARCHAR(100),  
  nome VARCHAR(100),  
@@ -81,8 +81,8 @@ CREATE TABLE SolicitaMotorista
  ID_SolicitacaoSuporte INT
 ); 
 
-ALTER TABLE Motorista ADD FOREIGN KEY(idVeiculo) REFERENCES Veiculo (ID);
-ALTER TABLE Motorista ADD FOREIGN KEY(idViagem) REFERENCES Viagem (ID);
+ALTER TABLE Motorista ADD FOREIGN KEY(ID_Veiculo) REFERENCES Veiculo (ID);
+ALTER TABLE Motorista ADD FOREIGN KEY(ID_Viagem) REFERENCES Viagem (ID);
 ALTER TABLE Viagem ADD FOREIGN KEY(ID_Passageiro) REFERENCES Passageiro (ID);
 ALTER TABLE Viagem ADD FOREIGN KEY(ID_Motorista) REFERENCES Motorista (ID);
 ALTER TABLE Pagamento ADD FOREIGN KEY(ID_Passageiro) REFERENCES Passageiro (ID);
