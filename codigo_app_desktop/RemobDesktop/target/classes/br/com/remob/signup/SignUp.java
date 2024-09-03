@@ -4,6 +4,8 @@
  */
 package br.com.remob.signup;
 
+import br.com.remob.userlogin.SignIn;
+
 /**
  *
  * @author aluno
@@ -49,6 +51,8 @@ public class SignUp extends javax.swing.JDialog {
         Register4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -205,6 +209,11 @@ public class SignUp extends javax.swing.JDialog {
         Register4.setForeground(new java.awt.Color(0, 153, 204));
         Register4.setText("Clique aqui");
         Register4.setAlignmentY(0.3F);
+        Register4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Register4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -322,6 +331,7 @@ public class SignUp extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
@@ -379,6 +389,12 @@ public class SignUp extends javax.swing.JDialog {
     private void CloseBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseBtnMouseClicked
         System.exit(0);
     }//GEN-LAST:event_CloseBtnMouseClicked
+
+    private void Register4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Register4MouseClicked
+        SignIn Cadastrar = new SignIn(null,true);
+        this.setVisible(false);
+        Cadastrar.setVisible(true);
+    }//GEN-LAST:event_Register4MouseClicked
 
     /**
      * @param args the command line arguments

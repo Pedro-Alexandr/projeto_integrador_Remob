@@ -313,6 +313,7 @@ public class SignIn extends javax.swing.JDialog {
 
     private void SignUpBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpBtnMouseClicked
         SignUp Cadastrar = new SignUp(null,true);
+        this.setVisible(false);
         Cadastrar.setVisible(true);
     }//GEN-LAST:event_SignUpBtnMouseClicked
 
